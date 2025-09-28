@@ -2531,6 +2531,11 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron,
 /area/station/command/bridge)
+"RN" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/vending/imported/snacktron,
+/turf/open/floor/plating,
+/area/station/commons/storage/primary)
 "Sg" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/stripes/corner,
@@ -2570,6 +2575,10 @@
 /obj/machinery/door/poddoor,
 /turf/open/floor/engine,
 /area/station/hallway/secondary/entry)
+"Tk" = (
+/obj/machinery/vending/imported/globodrobe,
+/turf/open/floor/plating,
+/area/station/commons/storage/primary)
 "Ts" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Gravity Generator"
@@ -7392,8 +7401,8 @@ dE
 dB
 dl
 dl
-dl
-dp
+Tk
+RN
 dE
 cS
 TY

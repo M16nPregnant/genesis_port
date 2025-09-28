@@ -1,14 +1,14 @@
 /obj/machinery/vending/dorms
-	name = "LustWish"
-	desc = "A vending machine with various toys. Not for the faint of heart."
-	icon_state = "lustwish"
-	base_icon_state = "lustwish"
-	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_structures/lustwish.dmi'
+	name = "Kink Tank"
+	desc = "A vending machine with various adult items."
+	icon_state = "kink"
+	base_icon_state = "kink"
+	icon = 'world_genesis/icons/machinery/vendors.dmi'
 	light_mask = "lustwish-light-mask"
 	age_restrictions = TRUE
 	///Has the discount card been used on the vending machine?
 	var/card_used = FALSE
-	product_ads = "Try me!;Kinky!;Lewd and fun!;Hey you, yeah you... wanna take a look at my collection?;Come on, take a look!;Remember, always adhere to Nanotrasen corporate policy!;Don't forget to use protection!"
+	product_ads = "Try me!;Kinky!;Lewd and fun!;Hey you, yeah you... wanna take a look at my collection?;Come on, take a look!;Remember, always adhere to Genesis corporate policy!;Don't forget to use protection!"
 	vend_reply = "We're glad to satisfy your desires!"
 
 	//STUFF SOLD HERE//

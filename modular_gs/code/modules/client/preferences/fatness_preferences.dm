@@ -51,10 +51,3 @@
 
 /datum/preference/numeric/max_weight/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	target.max_weight = value
-
-/datum/preference/numeric/breast_minimum
-	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
-	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "breast_minimum"
-	minimum = 0
-	maximum = 9
