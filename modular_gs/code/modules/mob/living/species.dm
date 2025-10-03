@@ -12,15 +12,15 @@
 	if(butt)
 		if(butt.max_genital_size > 0)
 			if((butt.genital_size + size_change) <= butt.max_genital_size)
-				butt.set_size(size_change)
+				butt.set_size(size_change + butt.set_genital_size)
 		else
-			butt.set_size(size_change)
+			butt.set_size(size_change + butt.set_genital_size)
 	if(belly)
 		if(belly.max_genital_size > 0)
 			if((belly.genital_size + size_change) <= belly.max_genital_size)
-				belly.set_size(size_change)
+				belly.set_size(size_change + belly.set_genital_size)
 		else
-			belly.set_size(size_change)
+			belly.set_size(size_change + belly.set_genital_size)
 	// if(tbelly)
 	// 	if(tbelly.max_genital_size > 0)
 	// 		if((tbelly.size + size_change) <= tbelly.max_genital_size)
@@ -30,9 +30,9 @@
 	if(breasts)
 		if(breasts.max_genital_size > 0)
 			if((breasts.genital_size + size_change) <= breasts.max_genital_size)
-				breasts.set_size(size_change)
+				breasts.set_size(size_change + breasts.set_genital_size)
 		else
-			breasts.set_size(size_change)
+			breasts.set_size(size_change + breasts.set_genital_size)
 
 	// H.genital_override = TRUE
 	H.update_body()
@@ -394,7 +394,7 @@
 			FATNESS_LEVEL_16,
 			"<span class='notice'>You feel less restrained by your fat!</span>",
 			"<span class='danger'>You feel like you've become a mountain of fat!</span>",
-			14)
+			16)
 		return
 	if(HAS_TRAIT(H, TRAIT_FATNESS_14))
 		handle_fatness_trait(
@@ -405,7 +405,7 @@
 			FATNESS_LEVEL_15,
 			"<span class='notice'>You feel less restrained by your fat!</span>",
 			"<span class='danger'>You feel like you've become a mountain of fat!</span>",
-			14)
+			15)
 		return
 	if(HAS_TRAIT(H, TRAIT_FATNESS_13))
 		handle_fatness_trait(

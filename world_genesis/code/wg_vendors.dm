@@ -81,3 +81,16 @@
 	extra_price = PAYCHECK_COMMAND
 	payment_department = NO_FREEBIES
 	allow_custom = TRUE
+
+//Cake
+/obj/item/wg13/devilcake
+	icon = 'world_genesis/icons/machinery/vendors.dmi'
+	icon_state = "devilcake"
+	name = "Devil's Food Cake"
+	desc = "A twisted treat that lets out demonic groans when bit into."
+
+/obj/item/wg13/devilcake/attack(mob/living/carbon/M, mob/living/carbon/user) //WG13 Edible Gainium
+	to_chat(M, "<span class='alert'>You take a bite from the devil's food cake.</span>")
+	to_chat(user, "<span class='notice'>You feed the devil's food cake to [M], causing it to regenrate some of itself as you do so!</span>")
+	playsound(M, 'sound/items/eatfood.ogg', 60, 1)
+	M.fatness_real += 20

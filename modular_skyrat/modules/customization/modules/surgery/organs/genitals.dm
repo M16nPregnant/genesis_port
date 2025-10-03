@@ -6,7 +6,8 @@
 	// GS13 EDIT
 	// maximum allowed size of the genital
 	var/max_genital_size = 0
-	// GS13 END EDIT
+	// set size, AKA the minimum size
+	var/set_genital_size = 0
 	///Sprite name of the genital, it's what shows up on character creation
 	var/genital_name = "Human"
 	///Type of the genital. For penises tapered/horse/human etc. for breasts quadruple/sixtuple etc...
@@ -44,7 +45,7 @@
 	return
 
 /obj/item/organ/genital/proc/set_size(size)
-	genital_size = size
+	genital_size = max(size, set_genital_size)	// GS13 edit - prevents the genitals from going below their minimum set size
 	update_sprite_suffix()
 
 /obj/item/organ/genital/Initialize(mapload)
@@ -494,6 +495,7 @@
 	lactates = DNA.features["breasts_lactation"]
 	uses_skin_color = DNA.features["breasts_uses_skincolor"]
 	set_size(DNA.features["breasts_size"])
+	set_genital_size = DNA.features["breasts_size"] // GS13 edit - minimum size, so that it doesn't change when the weight lower
 
 	return ..()
 

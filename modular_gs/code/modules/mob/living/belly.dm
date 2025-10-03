@@ -18,7 +18,7 @@
 	var/prev_size			= 0
 	layer_index = BELLY_LAYER_INDEX
 
-/obj/item/organ/genital/external/belly/modify_size(modifier, min = BELLY_SIZE_DEF, max = BELLY_SIZE_MAX)
+/obj/item/organ/genital/external/belly/modify_size(modifier, min = BELLY_SIZE_DEF, max = 20)
 	var/new_value = clamp(size_cached + modifier, starting_size, max)
 	if(new_value == size_cached)
 		return

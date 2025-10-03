@@ -468,6 +468,22 @@
 	vary = TRUE
 	sound = 'modular_skyrat/modules/emotes/sound/voice/cackle_yeen.ogg'
 
+/datum/emote/living/belch //WG13 EDIT
+	key = "belch"
+	key_third_person = "belches"
+	message = "belches!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'world_genesis/sound/emotes/belch1.ogg'
+
+/datum/emote/living/gurgle //WG13 EDIT
+	key = "gurgle"
+	key_third_person = "gurgles"
+	message = "'s stomach gurgles"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'world_genesis/sound/emotes/gurgle1.ogg'
+
 /mob/living/proc/do_ass_slap_animation(atom/slapped)
 	do_attack_animation(slapped, no_effect=TRUE)
 	var/image/gloveimg = image('icons/effects/effects.dmi', slapped, "slapglove", slapped.layer + 0.1)

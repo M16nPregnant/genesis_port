@@ -43,3 +43,19 @@
 		user.nextsoundemote = world.time + 7
 		playsound(user, 'modular_gs/sound/voice//cackle_yeen.ogg', 50, 1, -1)
 	. = ..()
+
+/datum/emote/living/burp/belch
+	key = "belch"
+	key_third_person = "belches loudly"
+	message = "belches"
+	emote_type = EMOTE_AUDIBLE
+	muzzle_ignore = FALSE
+	restraint_check = FALSE
+
+/datum/emote/living/belch/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'world_genesis/sound/emotes/belch1.ogg', 50, 1, -1)
+	. = ..()

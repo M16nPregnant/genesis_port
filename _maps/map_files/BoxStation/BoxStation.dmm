@@ -8889,41 +8889,38 @@
 /turf/open/floor/iron/large,
 /area/station/hallway/primary/central)
 "aLZ" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L3"
+/obj/structure/sign/logo,
+/obj/effect/turf_decal/siding/dark_red/inner_corner{
+	dir = 1
 	},
-/turf/open/floor/iron,
+/turf/open/floor/engine,
 /area/station/hallway/primary/central)
 "aMa" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L1"
-	},
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/dark_red,
+/obj/effect/turf_decal/trimline/dark_red/filled/warning,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "aMc" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L5"
+/obj/structure/sign/logo{
+	icon_state = "nanotrasen_sign2"
 	},
-/turf/open/floor/iron,
+/turf/open/floor/engine,
 /area/station/hallway/primary/central)
 "aMd" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L11"
+/obj/structure/sign/logo{
+	icon_state = "nanotrasen_sign5"
 	},
-/turf/open/floor/iron,
+/obj/effect/turf_decal/siding/dark_red/inner_corner{
+	dir = 4
+	},
+/turf/open/floor/engine,
 /area/station/hallway/primary/central)
 "aMe" = (
-/obj/effect/landmark/start/hangover,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L9"
+/obj/structure/sign/logo{
+	icon_state = "nanotrasen_sign4"
 	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
-"aMf" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "L13"
-	},
-/turf/open/floor/iron,
+/turf/open/floor/engine,
 /area/station/hallway/primary/central)
 "aMg" = (
 /turf/open/floor/iron/edge{
@@ -39857,9 +39854,16 @@
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat/maint)
 "dSx" = (
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Lockers";
+	location = "EVA"
+	},
 /obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L4"
+/obj/effect/turf_decal/siding/dark_red{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/dark_red/filled/warning{
+	dir = 1
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
@@ -44571,17 +44575,6 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit)
-"gfO" = (
-/obj/machinery/navbeacon{
-	codes_txt = "patrol;next_patrol=Lockers";
-	location = "EVA"
-	},
-/obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L6"
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "ggc" = (
 /obj/structure/window/green_glass_pane,
 /turf/open/floor/plating,
@@ -45872,11 +45865,8 @@
 /turf/open/floor/iron,
 /area/station/science/auxlab/firing_range)
 "gRd" = (
-/obj/structure/cable,
-/obj/effect/landmark/start/hangover,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L12"
-	},
+/obj/effect/turf_decal/siding/dark_red,
+/obj/effect/turf_decal/trimline/dark_red/filled/warning,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "gRm" = (
@@ -55728,6 +55718,8 @@
 /area/station/commons/fitness)
 "lfF" = (
 /obj/effect/landmark/start/hangover,
+/obj/effect/turf_decal/siding/dark_red,
+/obj/effect/turf_decal/trimline/dark_red/filled/warning,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "lfG" = (
@@ -67415,13 +67407,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit)
-"qEJ" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L2"
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "qEN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/directional/south,
@@ -68371,10 +68356,10 @@
 /area/station/maintenance/port)
 "qWq" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L7"
+/obj/structure/sign/logo{
+	icon_state = "nanotrasen_sign3"
 	},
-/turf/open/floor/iron,
+/turf/open/floor/engine,
 /area/station/hallway/primary/central)
 "qWu" = (
 /obj/machinery/light/small/directional/east,
@@ -68514,17 +68499,6 @@
 /obj/structure/steam_vent,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
-"qYY" = (
-/obj/machinery/navbeacon{
-	codes_txt = "patrol;next_patrol=Security";
-	location = "EVA2"
-	},
-/obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L10"
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "qZu" = (
 /obj/machinery/button/door{
 	id = "permaouter";
@@ -72176,10 +72150,7 @@
 /area/station/engineering/engine_smes)
 "sGk" = (
 /obj/structure/cable,
-/obj/effect/landmark/observer_start,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L8"
-	},
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "sGr" = (
@@ -78872,13 +78843,6 @@
 	dir = 1
 	},
 /area/station/cargo/office)
-"vEF" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/plaque{
-	icon_state = "L14"
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "vET" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 4
@@ -113011,8 +112975,8 @@ kmR
 cyg
 aJp
 aKE
-aMa
-qEJ
+aJq
+bBi
 wYS
 aPS
 aRl
@@ -113524,9 +113488,9 @@ jbt
 azZ
 kKk
 kCi
-aJq
+gRd
 aMc
-gfO
+dSx
 wYS
 aPS
 aRn
@@ -113781,9 +113745,9 @@ sYU
 pQf
 wwV
 aWE
-bBi
+aMa
 qWq
-sGk
+dSx
 aJu
 aPS
 aRm
@@ -114038,9 +114002,9 @@ azY
 vPx
 pzW
 aJt
-aJq
+gRd
 aMe
-qYY
+dSx
 aOE
 aPS
 aRp
@@ -114295,9 +114259,9 @@ cvP
 cvP
 cvP
 oHk
-aJq
-aMd
 gRd
+aMd
+dSx
 aJu
 aPU
 blN
@@ -114553,8 +114517,8 @@ rAC
 cvP
 vWE
 aKF
-aMf
-vEF
+aJq
+bBi
 aOE
 aPS
 aRr
@@ -114811,7 +114775,7 @@ cvP
 aJn
 aJn
 aMg
-bBi
+sGk
 aJu
 aPS
 aRq

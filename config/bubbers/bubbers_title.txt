@@ -118,7 +118,7 @@
 
 				.container_nav hr {
 					height: 2px;
-					background-color: #CDEEE1;
+					background-color: #ffffffff;
 					border: none;
 					box-shadow: 2px 2px black;
 				}
