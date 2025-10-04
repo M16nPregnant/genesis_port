@@ -30,19 +30,18 @@
 			"name" = "Meals",
 			"icon" = "pizza-slice",
 			"products" = list(
-				/obj/item/storage/box/foodpack/nt = 6,
-				/obj/item/storage/box/foodpack/nt/burger = 6,
-				/obj/item/storage/box/foodpack/nt/chicken_sammy = 6,
-				/obj/item/food/vendor_tray_meal/side = 6,
-				/obj/item/food/vendor_tray_meal/side/crackers_and_jam = 6,
-				/obj/item/food/vendor_tray_meal/side/crackers_and_cheese = 6,
+				/obj/item/wg13/gainiumcake = 99,
+				/obj/item/wg13/tenderburger = 99,
+				/obj/item/wg13/gainiumpizza = 99,
+				/obj/item/wg13/devilcake = 6,
+				/obj/item/wg13/cheribomb = 99,
 			),
 		),
 	)
 
 	refill_canister = /obj/item/vending_refill/snack/imported
-	default_price = PAYCHECK_CREW * 0.5
-	extra_price = PAYCHECK_COMMAND
+	default_price = 0
+	extra_price = 0
 	payment_department = NO_FREEBIES
 	allow_custom = TRUE
 
@@ -82,15 +81,106 @@
 	payment_department = NO_FREEBIES
 	allow_custom = TRUE
 
-//Cake
+//Devil's Food Cake
 /obj/item/wg13/devilcake
 	icon = 'world_genesis/icons/machinery/vendors.dmi'
 	icon_state = "devilcake"
-	name = "Devil's Food Cake"
-	desc = "A twisted treat that lets out demonic groans when bit into."
+	name = "devil's food cake"
+	desc = "A twisted treat that lets out demonic groans when bit into. It seems to regenerate itself when bitten into."
 
-/obj/item/wg13/devilcake/attack(mob/living/carbon/M, mob/living/carbon/user) //WG13 Edible Gainium
+/obj/item/wg13/devilcake/attack(mob/living/carbon/M, mob/living/carbon/user) //WG13
 	to_chat(M, "<span class='alert'>You take a bite from the devil's food cake.</span>")
-	to_chat(user, "<span class='notice'>You feed the devil's food cake to [M], causing it to regenrate some of itself as you do so!</span>")
+	if(user != M)
+		to_chat(user, "<span class='notice'>You feed the devil's food cake to [M], causing it to regenerate some of itself as you do so!</span>")
 	playsound(M, 'sound/items/eatfood.ogg', 60, 1)
 	M.fatness_real += 20
+
+
+//Gainium Tenderburger
+/obj/item/wg13/tenderburger
+	icon = 'icons/obj/food/burgerbread.dmi'
+	icon_state = "cheeseburgeralt"
+	name = "gainium seasoned tenderburger"
+	desc = "A burger tenderized with gainium instead of seasoning salt."
+	var/hp = 5
+
+/obj/item/wg13/tenderburger/attack(mob/living/carbon/M, mob/living/carbon/user) //WG13
+	if(hp > 0 )
+		M.fatness_real += 10
+		to_chat(M, "<span class='notice'>You take a bite from the [src].</span>")
+		if(user != M)
+			to_chat(user, "<span class='notice'>You feed the [src] to [M].</span>")
+		playsound(M, 'sound/items/eatfood.ogg', 60, 1)
+		hp -= 1
+	else
+		M.fatness_real += 10
+		qdel(src)
+		to_chat(M, "<span class='alert'>There is no more of the [src] left to eat. Oh no!</span>")
+
+
+
+//Gainium Pizza
+/obj/item/wg13/gainiumpizza
+	icon = 'icons/obj/food/pizza.dmi'
+	icon_state = "arnoldpizza"
+	name = "gainium seasoned pizza"
+	desc = "A pizza lightly dusted in gainium flakes."
+	var/hp = 15
+
+/obj/item/wg13/gainiumpizza/attack(mob/living/carbon/M, mob/living/carbon/user) //WG13
+	if(hp > 0 )
+		M.fatness_real += 10
+		to_chat(M, "<span class='notice'>You take a bite from the [src].</span>")
+		if(user != M)
+			to_chat(user, "<span class='notice'>You feed the [src] to [M].</span>")
+		playsound(M, 'sound/items/eatfood.ogg', 60, 1)
+		hp -= 1
+	else
+		M.fatness_real += 10
+		qdel(src)
+		to_chat(M, "<span class='alert'>There is no more of the [src] left to eat. Oh no!</span>")
+
+
+//Gainium Cake
+/obj/item/wg13/gainiumcake
+	icon = 'icons/obj/food/piecake.dmi'
+	icon_state = "liars_cake"
+	name = "edencake"
+	desc = "The frosting on this cake is imbued with gainium extract. Hoo boy!"
+	var/hp = 4
+
+/obj/item/wg13/gainiumcake/attack(mob/living/carbon/M, mob/living/carbon/user) //WG13
+	if(hp > 0 )
+		M.fatness_real += 20
+		to_chat(M, "<span class='notice'>You take a bite from the [src].</span>")
+		if(user != M)
+			to_chat(user, "<span class='notice'>You feed the [src] to [M].</span>")
+		playsound(M, 'sound/items/eatfood.ogg', 60, 1)
+		hp -= 1
+	else
+		M.fatness_real += 20
+		qdel(src)
+		to_chat(M, "<span class='alert'>There is no more of the [src] left to eat. Oh no!</span>")
+
+
+
+//Cheri Bomb
+/obj/item/wg13/cheribomb
+	icon = 'icons/obj/drinks/bottles.dmi'
+	icon_state = "cheribomb"
+	name = "Cheri Bomb"
+	desc = "A highly potent mix of fizzy soda containing gainium salts, don't drink this if you want your clothes to fit!"
+	var/hp = 20
+
+/obj/item/wg13/cheribomb/attack(mob/living/carbon/M, mob/living/carbon/user) //WG13
+	if(hp > 0 )
+		M.fatness_real += 5
+		to_chat(M, "<span class='notice'>You take a sip from the [src] bottle.</span>")
+		if(user != M)
+			to_chat(user, "<span class='notice'>You feed the [src] to [M].</span>")
+		playsound(M, 'sound/items/drink.ogg', 60, 1)
+		playsound(M, 'modular_gs/sound/voice/belch1.ogg', 60, 1)
+		hp -= 1
+	else
+		to_chat(M, "<span class='alert'>There is no more of the [src] left to drink. Oh no!</span>")
+		to_chat(user, "<span class='alert'>There is no more of the [src] left to feed to [M]. Oh no!</span>")
